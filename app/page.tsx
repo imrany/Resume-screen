@@ -39,7 +39,7 @@ export default function Home() {
           </Link>
           <Link
             className="flex items-center justify-center h-[40px] w-[150px] border-[1px] rounded-[10px]"
-            href="/"
+            href="/screen"
           >
             Type Resume
           </Link>
@@ -48,7 +48,7 @@ export default function Home() {
       <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
         <Link
           className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="/"
+          href="/screen"
         >
           <Image
             aria-hidden
@@ -61,7 +61,7 @@ export default function Home() {
         </Link>
         <Link
           className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="/"
+          href="/screen"
         >
           <Image
             aria-hidden
