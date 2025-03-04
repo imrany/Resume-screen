@@ -32,15 +32,39 @@ export default function UploadCard() {
     }
 
     try {
-      
       const text = await pdfToText(file);
-      console.log(text)
+      const data = await extractResumeData(text)
+      console.log(data)
       setIsDisabled(false)
-      console.log(text)
     } catch (error:any) {
       setIsDisabled(false)
       alert(error.message)
     }
+  }
+
+  async function extractResumeData(text:string) {
+    const skills = extractSection(text, "Skills", "Education");
+    const education = extractSection(text, "Education", "Work experience");
+    const workExperience = extractSection(text, "Work experience", "Reference");
+    const profession = extractSection(text, "Professional summary", "Skills");
+  
+    return {
+      skills,
+      education,
+      workExperience,
+      profession,
+    };
+  }
+
+  function extractSection(text:string, startMarker:any, endMarker:any) {
+    const startIndex = text.indexOf(startMarker);
+    const endIndex = text.indexOf(endMarker, startIndex);
+  
+    if (startIndex === -1 || endIndex === -1) {
+      return null;
+    }
+  
+    return text.slice(startIndex + startMarker.length, endIndex).trim();
   }
 
   return (
