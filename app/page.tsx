@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 
 export default function Home() {
   return (
@@ -30,24 +31,22 @@ export default function Home() {
         /> */}
 
         <div className="flex gap-4 w-full justify-center items-center flex-col sm:flex-row">
-          <a
+          <Link
             className="flex items-center justify-center h-[40px] w-[150px] bg-black text-white rounded-[10px]"
-            href="/"
+            href="/screen"
           >
             Get Started
-          </a>
-          <a
+          </Link>
+          <Link
             className="flex items-center justify-center h-[40px] w-[150px] border-[1px] rounded-[10px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
+            href="/"
           >
             Type Resume
-          </a>
+          </Link>
         </div>
       </main>
       <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-        <a
+        <Link
           className="flex items-center gap-2 hover:underline hover:underline-offset-4"
           href="/"
         >
@@ -59,8 +58,8 @@ export default function Home() {
             height={16}
           />
           Type resume
-        </a>
-        <a
+        </Link>
+        <Link
           className="flex items-center gap-2 hover:underline hover:underline-offset-4"
           href="/"
         >
@@ -72,10 +71,10 @@ export default function Home() {
             height={16}
           />
           Examples
-        </a>
-        <a
+        </Link>
+        <Link
           className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="/"
+          href="/screen"
         >
           <Image
             aria-hidden
@@ -85,7 +84,7 @@ export default function Home() {
             height={16}
           />
           Go to dashboard →
-        </a>
+        </Link>
       </footer>
     </div>
   );
