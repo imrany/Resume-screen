@@ -14,7 +14,7 @@ export default function Home() {
       </svg>
 
       <main className="flex flex-col gap-y-12 justify-center h-full items-center">
-        <h1 className="text-4xl sm:text-6xl leading-0.5 tracking-tighter w-full text-zinc-700 font-bold text-center sm:text-left">
+        <h1 className="text-4xl text-wrap sm:text-6xl leading-0.5 tracking-tighter w-full text-zinc-700 font-bold text-center sm:text-left">
           The Best Screener for your resume
         </h1>
         <p className="text-gray-500 text-lg text-wrap text-center w-[720px]">
@@ -83,7 +83,7 @@ export default function Home() {
             width={16}
             height={16}
           />
-          Go to dashboard →
+          Go to Screen →
         </Link>
       </footer>
     </div>
