@@ -3,8 +3,8 @@ const apiKey = process.env.GEMINI_API_KEY as string;
 
 export async function POST(req: Request) { 
     try { 
-        const { skills, education, workExperience, profession } = await req.json(); 
-        const prompt = `I am a ${profession || 'professional'} with ${skills || 'various'} skills and ${education || 'an education'}. I have ${workExperience || 'several'} years of work experience. I am looking for a job. What's my "**Job Title**"? Give me as "**Job Title**", "**Job Description**" and "**Salary**" in Kes, separate the three with '&&'. Provide all possible job offers in format`;
+        const { full_name,qualifications,experience } = await req.json(); 
+        const prompt = `I am a  ${full_name} with ${qualifications || 'various'} skills. I have ${experience || 'several'} years of work experience. I am looking for a job. What's my "**Job Title**"? Give me as "**Job Title**", "**Job Description**" and "**Salary**" in Kes, separate the three with '&&'. Provide all possible job offers in format`;
 
         const response = await axios({ 
             method: "POST", 

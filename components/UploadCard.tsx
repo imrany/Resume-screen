@@ -62,7 +62,16 @@ export default function UploadCard() {
         })
         console.log(parseRes)
       } else {
-        setJobOffers(parseRes.jobOffers)
+        if(parseRes.jobOffers.length===0){
+          toast("Found no job offers", {
+            action: {
+              label: "Retry",
+              onClick: () => handleUpload(e),
+            },
+          })
+        }else{
+          setJobOffers(parseRes.jobOffers)
+        }
       }
       setIsDisabled(false)
     } catch (error: any) {
@@ -130,6 +139,7 @@ export default function UploadCard() {
                         const file = e.target.files?.[0];
                         if (file) {
                           setFileName(file.name);
+                          setIsDisabled(false);
                         }
                       }}
                       required

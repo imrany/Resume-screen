@@ -21,15 +21,6 @@ export default function Home() {
           Find online job offers by uploading or typing your resume and qualification here,
           We use <span className="text-black font-semibold">artificial intelligence</span> to scan and scrap your resume and find you online job offers.
         </p>
-        {/* <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        /> */}
-
         <div className="flex gap-4 w-full justify-center items-center flex-col sm:flex-row">
           <Link
             className="flex items-center justify-center h-[40px] w-[150px] bg-black text-white rounded-[10px]"
@@ -39,7 +30,7 @@ export default function Home() {
           </Link>
           <Link
             className="flex items-center justify-center h-[40px] w-[150px] border-[1px] rounded-[10px]"
-            href="/screen"
+            href="/type"
           >
             Type Resume
           </Link>
@@ -48,7 +39,7 @@ export default function Home() {
       <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
         <Link
           className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="/screen"
+          href="/type"
         >
           <Image
             aria-hidden
@@ -61,7 +52,7 @@ export default function Home() {
         </Link>
         <Link
           className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="/screen"
+          href="/examples"
         >
           <Image
             aria-hidden
