@@ -58,7 +58,7 @@ export async function POST(req: Request) {
                     title, location: "Kenya", 
                     salary: salary + (salary.includes("per") ? "" : " per month"), 
                     snippet: description, 
-                    url: `https://www.linkedin.com/jobs/search/?keywords="${encodeURIComponent(title)}"%20AND%20"Remote"` 
+                    url: `https://www.linkedin.com/jobs/search/?keywords=${encodeURIComponent(title)}` 
                 }; 
                 // Avoid duplicate entries 
                 if (!jobOffers.some(offer => offer.title === jobOffer.title)) { 
